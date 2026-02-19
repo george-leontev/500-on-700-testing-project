@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+    --background: #0f0f17;
+    --foreground: #ffffff;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: var(--foreground);
+    background: var(--background);
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+}
+
+.custom-button {
+    padding: 12px 24px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    cursor: pointer;
+    background:
+        linear-gradient(#0f0f17, #0f0f17) padding-box,
+        linear-gradient(to bottom, #fb8627, #f5bef6) border-box;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(251, 134, 39, 0.3);
+    }
+}
+
+.logo-icon {
+    height: 50px;
+    width: auto;
+}
+
+.news-image {
+    height: 300px;
+    width: auto;
+}
