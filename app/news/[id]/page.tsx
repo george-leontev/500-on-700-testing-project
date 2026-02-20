@@ -8,6 +8,8 @@ import { NewsProvider, useNews } from "@/app/context/news-context";
 import { NewsModel } from "@/app/models/news-model";
 import { formatDateToRussian } from "@/app/utils/format-date-to-russian";
 import { Footer } from "@/app/components/footer/footer";
+import { backArrow } from "@/app/assets";
+import Link from "next/link";
 
 type NewsDetailPageParams = {
     id: string;
@@ -43,6 +45,12 @@ const NewsItemPageInternal = () => {
         <div className='page-wrapper'>
             <div className='news-item-container'>
                 <div className='news-image-section'>
+                     <Link href={"/news"} className='back-to-news-link'>
+                        <div className='back-to-news-container'>
+                            <Image src={backArrow} alt='back-arrow' />
+                            <p>Обратно к новостям</p>
+                        </div>
+                    </Link>
                     <Image
                         src={newsItem.imageSrc}
                         width={800}

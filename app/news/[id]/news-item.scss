@@ -32,6 +32,7 @@
         .news-image-section {
             width: 100%;
             max-width: 100vw;
+            padding: 10px;
         }
 
         .news-item-image {
@@ -42,6 +43,12 @@
         .news-content-section {
             max-width: 95%;
             margin: 0 auto;
+        }
+    }
+
+    @media (max-width: 429px) {
+        .news-image-section {
+            padding: 0;
         }
     }
 
@@ -85,4 +92,22 @@
     line-height: 1.8;
     color: #cccccc;
     margin: 0;
+}
+
+.back-to-news-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.back-to-news-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 0;
+    height: fit-content;
+
+    &:hover div {
+        opacity: 0.8;
+    }
 }
