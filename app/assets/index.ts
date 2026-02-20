@@ -1,5 +1,5 @@
-import appLogo from "./logo.svg";
-import checkIcon from "./check.svg";
-import closeIcon from "./close-icon.svg";
+import appLogo from "./icons/logo.svg";
+import checkIcon from "./icons/check.svg";
+import closeIcon from "./icons/close-icon.svg";
 
 export { appLogo, checkIcon, closeIcon };

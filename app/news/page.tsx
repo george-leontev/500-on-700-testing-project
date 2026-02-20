@@ -9,11 +9,11 @@ const HomePageInternal = () => {
     const { news, isLoading } = useNews();
 
     if (isLoading) {
-        return <div>Загрузка новостей...</div>;
+        return <div className="status-message">Загрузка новостей...</div>;
     }
 
     if (!news || news.length === 0) {
-        return <div>Нет новостей для отображения</div>;
+        return <div className="status-message">Нет новостей для отображения</div>;
     }
 
     return (

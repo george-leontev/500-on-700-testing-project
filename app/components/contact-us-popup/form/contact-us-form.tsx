@@ -1,5 +1,6 @@
 "use client";
 
+import { ContactRequestModel } from "@/app/models/contact-request-model";
 import { CustomCheckbox } from "../../custom-checkbox/custom-checkbox";
 import { CustomInput } from "../../custom-input/custom-input";
 import "./contact-us-form.scss";
@@ -7,12 +8,6 @@ import { useRef, useState, useCallback, SyntheticEvent, ChangeEvent } from "reac
 
 type ContactUsFormProps = {
     onClose: () => void;
-};
-
-type FormModel = {
-    name: string;
-    phone: string;
-    email: string;
 };
 
 export const ContactUsForm = ({ onClose }: ContactUsFormProps) => {
@@ -27,7 +22,7 @@ export const ContactUsForm = ({ onClose }: ContactUsFormProps) => {
             if (formRef.current) {
                 const formData = new FormData(formRef.current);
 
-                const data: FormModel = {
+                const data: ContactRequestModel = {
                     name: formData.get("name") as string,
                     phone: formData.get("phone") as string,
                     email: formData.get("email") as string,
