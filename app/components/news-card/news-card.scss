@@ -29,8 +29,8 @@
     .news-title-link {
         text-decoration: none;
         color: inherit;
-        display: inline-block;
         cursor: pointer;
+        padding: 0;
 
         &:hover h3 {
             opacity: 0.8;

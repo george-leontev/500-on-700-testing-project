@@ -1,5 +1,6 @@
-import appLogo from "./icons/logo.svg";
+import appLogo from "./icons/app-logo.svg";
+import appLogoWhite from "./icons/app-logo-white.svg";
 import checkIcon from "./icons/check.svg";
 import closeIcon from "./icons/close-icon.svg";
 
-export { appLogo, checkIcon, closeIcon };
+export { appLogo, appLogoWhite, checkIcon, closeIcon };

@@ -26,6 +26,12 @@ body {
     }
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 .custom-button {
     padding: 12px 24px;
     background: transparent;
