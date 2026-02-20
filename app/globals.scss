@@ -29,7 +29,7 @@ body {
 .custom-button {
     padding: 12px 24px;
     background: transparent;
-    border: 1px solid transparent;
+    border: 1.5px solid transparent;
     border-radius: 40px;
     cursor: pointer;
     background:
@@ -46,6 +46,7 @@ body {
 .logo-icon {
     height: 50px;
     width: auto;
+    cursor: pointer;
 }
 
 .news-image {

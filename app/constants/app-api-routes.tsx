@@ -1,3 +1,3 @@
 export default {
-    news: '/data/news.json',
+    news: "/data/news.json",
 };

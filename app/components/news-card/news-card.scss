@@ -26,12 +26,14 @@
         flex-direction: column;
     }
 
-    .news-title {
+    .news-title-link {
+        text-decoration: none;
+        color: inherit;
+        display: inline-block;
         cursor: pointer;
-        transition: opacity 0.3s ease;
 
-        &:hover {
-            opacity: 80%;
+        &:hover h3 {
+            opacity: 0.8;
         }
     }
 

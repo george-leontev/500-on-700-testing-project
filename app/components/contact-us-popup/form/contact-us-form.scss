@@ -1,0 +1,19 @@
+.popup-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 10px;
+
+    .custom-button {
+        background:
+            linear-gradient(#ffffff, #ffffff) padding-box,
+            linear-gradient(to bottom, #fb8627, #f5bef6) border-box;
+        color: #333;
+    }
+}

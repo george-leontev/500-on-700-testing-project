@@ -18,8 +18,8 @@ const HomePageInternal = () => {
 
     return (
         <div className='news-page'>
-            <h1 className="news-page-title">НОВОСТИ</h1>
-            <div className="news-grid">
+            <h1 className='news-page-title'>НОВОСТИ</h1>
+            <div className='news-grid'>
                 {news.map((n: NewsModel) => {
                     return (
                         <div key={n.id}>
