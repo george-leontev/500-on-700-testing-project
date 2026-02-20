@@ -45,7 +45,7 @@ const NewsItemPageInternal = () => {
         <div className='page-wrapper'>
             <div className='news-item-container'>
                 <div className='news-image-section'>
-                     <Link href={"/news"} className='back-to-news-link'>
+                    <Link href={"/news"} className='back-to-news-link'>
                         <div className='back-to-news-container'>
                             <Image src={backArrow} alt='back-arrow' />
                             <p>Обратно к новостям</p>

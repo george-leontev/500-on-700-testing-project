@@ -101,11 +101,13 @@
 }
 
 .back-to-news-link {
+    display: block;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
     padding: 0;
     height: fit-content;
+    width: fit-content;
 
     &:hover div {
         opacity: 0.8;

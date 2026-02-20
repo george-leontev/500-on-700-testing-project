@@ -17,3 +17,24 @@
         color: #333;
     }
 }
+
+.phone-input {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.2s ease;
+    outline: none;
+
+    &:focus {
+        border-color: #fb8627;
+        box-shadow: 0 0 0 3px rgba(251, 134, 39, 0.1);
+    }
+
+    &::placeholder {
+        color: #999;
+    }
+}

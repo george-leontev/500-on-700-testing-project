@@ -10,7 +10,7 @@ export const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    title: "Cool NextJS testing project",
+    title: "Frontend news",
     description: "A front-end news project built on the excellent NextJS framework.",
 };
 

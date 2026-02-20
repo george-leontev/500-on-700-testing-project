@@ -5,6 +5,7 @@ import { CustomCheckbox } from "../../custom-checkbox/custom-checkbox";
 import { CustomInput } from "../../custom-input/custom-input";
 import "./contact-form.scss";
 import { useRef, useState, useCallback, SyntheticEvent, ChangeEvent } from "react";
+import PhoneInput from "react-phone-number-input/input";
 
 type ContactFormProps = {
     onClose: () => void;
@@ -12,6 +13,7 @@ type ContactFormProps = {
 
 export const ContactForm = ({ onClose }: ContactFormProps) => {
     const [agreement, setAgreement] = useState(false);
+    const [phoneValue, setPhoneValue] = useState<string>();
 
     const formRef = useRef<HTMLFormElement>(null);
 
@@ -24,7 +26,7 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
 
                 const data: ContactRequestModel = {
                     name: formData.get("name") as string,
-                    phone: formData.get("phone") as string,
+                    phone: phoneValue || "",
                     email: formData.get("email") as string,
                 };
 
@@ -33,14 +35,22 @@ export const ContactForm = ({ onClose }: ContactFormProps) => {
                 onClose();
             }
         },
-        [onClose],
+        [onClose, phoneValue],
     );
 
     return (
         <form ref={formRef} onSubmit={handleSubmit} className='popup-form'>
             <CustomInput type='text' name='name' placeholder='Имя' required />
 
-            <CustomInput type='tel' name='phone' placeholder='Номер телефона' required />
+            <PhoneInput
+                name='phone'
+                placeholder='Номер телефона'
+                country='RU'
+                value={phoneValue}
+                onChange={setPhoneValue}
+                required
+                className='phone-input'
+            />
 
             <CustomInput type='email' name='email' placeholder='Email' required />
 
