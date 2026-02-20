@@ -3,14 +3,14 @@
 import { ContactRequestModel } from "@/app/models/contact-request-model";
 import { CustomCheckbox } from "../../custom-checkbox/custom-checkbox";
 import { CustomInput } from "../../custom-input/custom-input";
-import "./contact-us-form.scss";
+import "./contact-form.scss";
 import { useRef, useState, useCallback, SyntheticEvent, ChangeEvent } from "react";
 
-type ContactUsFormProps = {
+type ContactFormProps = {
     onClose: () => void;
 };
 
-export const ContactUsForm = ({ onClose }: ContactUsFormProps) => {
+export const ContactForm = ({ onClose }: ContactFormProps) => {
     const [agreement, setAgreement] = useState(false);
 
     const formRef = useRef<HTMLFormElement>(null);

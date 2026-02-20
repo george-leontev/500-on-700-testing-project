@@ -10,7 +10,7 @@ interface CustomCheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
 export const CustomCheckbox = ({ label, ...props }: CustomCheckboxProps) => {
     return (
         <label className='custom-checkbox'>
-            <input type='checkbox' {...props} required />
+            <input type='checkbox' {...props} />
             <span className='box'>
                 <Image src={checkIcon} alt='check-mark' />
             </span>

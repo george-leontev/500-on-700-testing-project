@@ -1,10 +1,10 @@
 "use client";
 
+import "./header.scss";
 import { useState } from "react";
 import { appLogo } from "../../assets";
 import Image from "next/image";
-import "./header.scss";
-import { ContactUsPopup } from "../contact-us-popup/popup/contact-us-popup";
+import { ContactPopup } from "../contact-popup/popup/contact-popup";
 import Link from "next/link";
 
 export const Header = () => {
@@ -23,7 +23,7 @@ export const Header = () => {
                 </div>
             </div>
 
-            {isPopupOpen && <ContactUsPopup onClose={() => setIsPopupOpen(false)} />}
+            {isPopupOpen && <ContactPopup onClose={() => setIsPopupOpen(false)} />}
         </>
     );
 };

@@ -1,16 +1,16 @@
 "use client";
 
-import "./contact-us-popup.scss";
+import "./contact-popup.scss";
 import { useCallback, MouseEvent } from "react";
 import Image from "next/image";
 import { closeIcon } from "@/app/assets";
-import { ContactUsForm } from "../form/contact-us-form";
+import { ContactForm } from "../form/contact-form";
 
-type ContactUsPopupProps = {
+type ContactPopupProps = {
     onClose: () => void;
 };
 
-export const ContactUsPopup = ({ onClose }: ContactUsPopupProps) => {
+export const ContactPopup = ({ onClose }: ContactPopupProps) => {
     const handleOverlayClick = useCallback(
         (e: MouseEvent<HTMLDivElement>) => {
             if (e.target === e.currentTarget) {
@@ -29,7 +29,7 @@ export const ContactUsPopup = ({ onClose }: ContactUsPopupProps) => {
                         <Image src={closeIcon} alt='close-icon' />
                     </button>
                 </div>
-                <ContactUsForm onClose={onClose} />
+                <ContactForm onClose={onClose} />
             </div>
         </div>
     );
